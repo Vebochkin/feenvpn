@@ -1,36 +1,239 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.push-notification {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-.App-link {
-  color: #61dafb;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.notification-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  max-width: 400px;
+  width: 90%;
+}
+
+.notification-content .gif {
+/* twa-mp4 */
+ 
+width: 276px;
+height: 138px;
+left: 57px;
+right: -33px;
+top: 369px;
+bottom: -222px;
+}
+
+.notification-content .title {
+/* Не забудьте вернуться в Telegram и нажать “Завершить настройку” */
+ 
+
+}
+
+.notification-content .description {
+  margin-bottom: 1rem;
+}
+
+.notification-content .btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.notification-content .btn.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Стили для компонента VPNSetupPage */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000000;
+}
+
+.content {
+ 
+  
+ 
+  
+   
+}
+
+.content .gif {
+ /* duck-lottie */
+position: absolute;
+width: 152px;
+height: 152px;
+left: 119px;
+right: 22px;
+top: 322px;
+bottom: -180px;
+}
+
+.content .title {
+ /* Давайте настроим VPN */
+position: absolute;
+width: 176px;
+height: 52px;
+left: 107px;
+right: 10px;
+top: 486px;
+bottom: -244px;
+color: rgb(255, 255, 255);
+ 
+ 
+font-weight: 700;
+line-height: 110%;
+letter-spacing: 0%;
+text-align: center;
+}
+
+.content .description {
+ /* Чтобы подключить vpn, установите приложение, а затем нажмите “Завершить настройку” */
+position: absolute;
+width: 293px;
+height: 66px;
+left: 48px;
+right: -48px;
+top: 550px;
+bottom: -322px;
+display: flex;
+flex-direction: row;
+align-items: center;
+font-family: Inter;
+font-size: 18px;
+font-weight: 400;
+line-height: 120%;
+letter-spacing: 0%;
+text-align: center;
+color: rgb(142, 142, 148);
+}
+
+.content .footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.content .btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.content .btn.install-btn {
+/* Установить приложение */
+ 
+width: 244px;
+height: 24px;
+/* Автолейаут */
+ 
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 14px 58px 14px 58px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+ 
+/* bottom-button-1 */
+position: absolute;
+width: 360px;
+height: 52px;
+left: 15px;
+ 
+top: 688px;
+bottom: 104px;
+/* Автолейаут */
+display: flex;
+flex-direction: row;
+justify-content: center;
+ 
+padding: 14px 58px 14px 58px;
+
+border-radius: 17px;
+
+background: rgb(0, 23, 49);
+color: rgb(51, 142, 247);
+font-family: Inter;
+font-size: 20px;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: left;
+}
+
+.content .btn.setup-btn {
+/* Завершить настройку */
+ 
+ 
+ 
+/* Автолейаут */
+ 
+ 
+ 
+ 
+ 
+
+
+/* Inside Auto Layout */
+ 
+ 
+ 
+ 
+/* bottom-button-2 */
+position: absolute;
+ 
+height: 52px;
+left: 15px;
+right: 15px;
+top: 752px;
+ 
+/* Автолейаут */
+ 
+ 
+ 
+ 
+ 
+border-radius: 17px;
+
+background: rgb(5, 40, 20);
+color: rgb(69, 212, 131);
+font-family: Inter;
+font-size: 20px;
+font-weight: 600;
+line-height: 20px;
+ 
+ 
 }
